@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Quicksand", sans-serif;
+        }
+
+        .navegador {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            margin-top: 10px;
+        }
+
+        .logo {
+            width: 100px;
+
+        }
+
+        .navbar-left {
+            /* la imagen del logo esta en el mismo contenedor del navbarleft  y anteriormente le hicimos display: flex:  a navbar right: y navbar left:  juntos por lo cual necesitamos darle la misma propiedad a esta clase ya que nunca se toma en cuenta; */
+            display: flex;
+        }
+
+        .navbar-left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+        }
+
+        .navbar-left ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            margin-right: 16px;
+
+        }
+
+        .navbar-left ul li a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            border-radius: 6px;
+
+
+        }
+
+
+        .button-singup {
+            background-color: var(--white);
+            border: 2px var(--hospital-green) solid;
+            border-radius: 8px;
+            color: var(--hospital-green);
+            height: 30px;
+            cursor: pointer;
+            font-weight: bold;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navegador">
+
+        <div class="navbar-left">
+            <img class="logo" src="./logos/logo_bota_fora.svg" alt="">
+            <ul>
+                <li>
+                    <a href="/">Inicio</a>
+                </li>
+                <li>
+                    <a href="/">Articulos</a>
+                </li>
+                <li>
+                    <a href="/">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="/">Novedades</a>
+                </li>
+                <li>
+                    <a href="/">Otros</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="navbar-rigth">
+
+            <button class="button-singup">Login in</button>
+
+
+
+
+        </div>
+    </nav>
+</body>
+
+</html>
