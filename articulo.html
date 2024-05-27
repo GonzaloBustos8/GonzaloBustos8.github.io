@@ -26,8 +26,63 @@
             margin: 0;
             font-family: "Quicksand", sans-serif;
         }
+        .navegador {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px 10px;
+            margin-top: 14px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
 
+        .logo {
+            width: 100px;
+
+        }
+
+        .navbar-left {
+            /* la imagen del logo esta en el mismo contenedor del navbarleft  y anteriormente le hicimos display: flex:  a navbar right: y navbar left:  juntos por lo cual necesitamos darle la misma propiedad a esta clase ya que nunca se toma en cuenta; */
+            display: flex;
+        }
+
+        .navbar-left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+        }
+
+        .navbar-left ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            margin-right: 16px;
+
+        }
+
+        .navbar-left ul li a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            border-radius: 6px;
+
+
+        }
+
+
+        .button-singup {
+            background-color: var(--white);
+            border: 2px var(--hospital-green) solid;
+            border-radius: 8px;
+            color: var(--hospital-green);
+            height: 30px;
+            cursor: pointer;
+            font-weight: bold;
+
+
+        }
         .articulos {
+            margin-top: 20px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -37,7 +92,7 @@
 
         .primer-nota {
             display: flex;
-            border-bottom: 1px solid var(--black);
+            border-bottom: 1px solid var(--very-light-pink);
             justify-content: space-between;
 
 
@@ -86,7 +141,39 @@
 </head>
 
 <body>
-    <aside class="articulos">
+    <nav class="navegador">
+
+        <div class="navbar-left">
+            <img class="logo" src="./logos/logo_bota_fora.svg" alt="">
+            <ul>
+                <li>
+                    <a href="./navegador.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="./articulo.html">Articulos</a>
+                </li>
+                <li>
+                    <a href="/">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="/">Novedades</a>
+                </li>
+                <li>
+                    <a href="/">Otros</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="navbar-rigth">
+
+            <button class="button-singup">Login in</button>
+
+
+
+
+        </div>
+    </nav>
+    <article class="articulos">
         <div class="primer-nota">
             <div class="texto-primer-nota">
                 <h1 class="title">Estos son los beneficios de la lengua de suegra que probablemente no conocías</h1>
@@ -130,7 +217,7 @@
 
         </div>
         <p></p>
-    </aside>
+    </article>
 </body>
 
 </html>
