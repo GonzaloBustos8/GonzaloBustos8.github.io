@@ -26,8 +26,8 @@ form.addEventListener("submit",e =>{
     if(entrar){
         parrafo.innerHTML=warning;
     }else{
-        parrafo.innerHTML="envviado"
-        window.location.href = './navegador.html';
+       
+        window.location.href = './pags/navegador.html';
 
     }
 
