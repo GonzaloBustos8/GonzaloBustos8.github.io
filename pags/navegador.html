@@ -89,14 +89,16 @@
             justify-items: center;
             align-items: center;
             margin-top: 40px;
+            
 
         }
 
         .carrusel img {
             border-radius: 10px;
+            object-fit: cover;
         }
 
-        .carrusel button {
+        /* .carrusel button {
             background-color: var(--hospital-green);
             line-height: 5px;
             font-size: 30px;
@@ -105,24 +107,44 @@
             width: 70px;
             height: 70px;
             margin: 30px;
-            border-radius: 50%;
-        }
+            border-radius: 50% ;
+            border: 1px solid var(--very-light-pink);
+        } */
 
-        .carrusel button img {
+        /* .carrusel button img {
             width: 50px;
-        }
+        } */
 
         .titulo {
-            font-family: Arial, sans-serif;
+           
             text-align: center;
             margin-top: 60px;
-            font-style: italic;
-            font-size: x-large;
+           
+            font-size: var(--lg);
         }
 
         #imgCarrusel {
-            height: 450px;
-            width: 400px;
+            height: 350px;
+            width: 350px;
+        }
+        .boton{
+            width: 70px;
+            height: 70px;
+            background-color: var(--hospital-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+        .botonAtras{
+            margin-right: 30px;
+        }
+        .botonAdelante{
+            margin-left: 30px;
         }
     </style>
 </head>
@@ -155,15 +177,18 @@
         <h2>La Sansevieria</h2>
     </div>
     <div class="carrusel">
-        <button class="atras" onclick="imgAnt()">
-            <img src="../imgs/imgAtras.png" alt="anterior" /></button>
+        <!-- <button class="atras" onclick="imgAnt()">
+            <img src="../imgs/imgAtras.png" alt="anterior" /></button> -->
+        <div class="boton botonAtras" onclick="imgAnt()"><</div>
 
         <img src="../imgs/imagen1.jpg" id="imgCarrusel">
 
-        <button class="siguiente" onclick="imgSig()">
+        <!-- <button class="siguiente" onclick="imgSig()">
             <img src="../imgs/imgSiguiente.png" alt="siguiente" />
-        </button>
+        </button> -->
+        <div class="boton botonAdelante" onclick="imgSig()">></div>
     </div>
+
 </body>
 
 </html>
