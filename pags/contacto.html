@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>Document</title>
-    <script src="../carrusel.js"></script>
     <style>
         :root {
             --white: #FFFFFF;
@@ -32,11 +31,6 @@
             padding: 0 24px 10px;
             margin-top: 14px;
             border-bottom: 1px solid var(--very-light-pink);
-        }
-
-        .logo {
-            width: 100px;
-
         }
 
         .navbar-left {
@@ -69,7 +63,6 @@
 
         }
 
-
         .button-singup {
             background-color: var(--white);
             border: 2px var(--hospital-green) solid;
@@ -82,47 +75,85 @@
 
         }
 
-        .carrusel {
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .form-container {
+            display: grid;
+            /* grid-template-columns: auto;
+            grid-auto-rows: auto;
+             */
+            /* a la fla 1 y 3 se le asignan tamaños automaicos segun su contenido y la fila 2 ocupa todo el lugar restante disponible  */
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .logo {
+            width: 100px;
+
+        }
+
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form {
+            /* por defecto con flex este se pone de forma horinzintal */
             display: flex;
-            justify-content: center;
-            align-content: center;
-            justify-items: center;
-            align-items: center;
-            margin-top: 40px;
+            /* cuando le damos a column todo se coloca de fomra vertical */
+            flex-direction: column;
+        }
+
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
 
         }
 
-        .carrusel img {
-            border-radius: 10px;
+        .input {
+            border: none;
+            background-color: var(--text-input-field);
+            border-radius: 8px;
+            height: 30px;
+            margin-bottom: 12px;
+            font-size: var(--md);
+            padding: 6px;
         }
 
-        .carrusel button {
+        .primary-button {
             background-color: var(--hospital-green);
-            line-height: 5px;
-            font-size: 30px;
+            border: none;
+            border-radius: 8px;
+            color: var(--white);
+            height: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: var(--md);
+
+        }
+
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        .warning {
+            color: red;
+            font-size: var(--md);
             text-align: center;
-            align-items: center;
-            width: 70px;
-            height: 70px;
-            margin: 30px;
-            border-radius: 50%;
         }
 
-        .carrusel button img {
-            width: 50px;
-        }
-
-        .titulo {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 60px;
-            font-style: italic;
-            font-size: x-large;
-        }
-
-        #imgCarrusel {
-            height: 450px;
-            width: 400px;
+        .input-mensaje {
+            width: 300px;
+            height: 150px;
+            resize: none;
         }
     </style>
 </head>
@@ -157,19 +188,31 @@
                 <button a class="button-singup">Cerrar sesion</button></a>
         </div>
     </nav>
-    <div class="titulo">
-        <h2>La Sansevieria</h2>
-    </div>
-    <div class="carrusel">
-        <button class="atras" onclick="imgAnt()">
-            <img src="../imgs/imgAtras.png" alt="anterior" /></button>
 
-        <img src="../imgs/imagen1.jpg" id="imgCarrusel">
+    <div class="login">
+        <div class="form-container">
 
-        <button class="siguiente" onclick="imgSig()">
-            <img src="../imgs/imgSiguiente.png" alt="siguiente" />
-        </button>
+            <h1 class="title">Ponte en contacto con nosotros!</h1>
+
+            <form action="/" class="form">
+                <label for="name" class="label">Nombre y Apellido</label>
+                <input type="text" id="name" placeholder="Pepe" class=" input input-usuario">
+
+                <label for="mail" class="label">Correo electronico</label>
+                <input type="email" id="mail" placeholder="ejemplo@gmail.com" class=" input input-email">
+
+                <label for="telefono" class="label">Telefono</label>
+                <input type="text" id="telefono" placeholder="000 000 000" class=" input input-telefono">
+
+                <label for="mensaje" class="label">Mensaje</label>
+                <textarea name="" id="textarea" class="input input-mensaje"></textarea>
+
+                <button type="submit" class="primary-button login-button">Enviar mensaje</button>
+                <p class="warning"></p>
+            </form>
+        </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>
