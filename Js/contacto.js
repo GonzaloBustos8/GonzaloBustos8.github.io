@@ -36,9 +36,12 @@ form.addEventListener("submit", (e) => {
   if (entrar) {
     parrafo.innerHTML = warning;
   } else {
+    form.style.display = "none";
     //crear createElement que muestre el mensaje enviado
-    /* let li = document.createElement("li");
 
-    li.innerHTML = mensaje.value; */
+    const texto = document.createElement("p");
+    texto.innerHTML = "Mensaje enviado: <br><br>" + mensaje.value;
+
+    document.getElementById("contacto").appendChild(texto);
   }
 });
