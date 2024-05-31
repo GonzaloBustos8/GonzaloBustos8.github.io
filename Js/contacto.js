@@ -29,8 +29,8 @@ form.addEventListener("submit", (e) => {
     warning += "Mensaje vacio. <br>";
     entrar = true;
   }
-  if (msj.length > 150) {
-    warning += "El limite de caracteres es 150 <br>";
+  if (msj.length > 200) {
+    warning += "El limite de caracteres es 200 <br>";
     entrar = true;
   }
   if (entrar) {
